@@ -6,11 +6,11 @@ export default class Pig extends React.Component {
 
   panic = () => (<img className="exclamation" src={exclamation} alt="" />)
 
-
   render() {
+    console.log(this.props)
     return(
       <div id={this.props.name} className="sheeple">
-        {null}
+        {(this.props.environment === "inhospitable") ? this.panic() : null}
       </div>
     )
   }
